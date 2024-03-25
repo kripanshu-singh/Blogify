@@ -22,7 +22,7 @@ const postSchema = new Schema(
                 "Technology",
                 "Education",
                 "Finance",
-                "Fashion/Beauty",
+                "Fashion_Beauty",
                 "DIY_Craft",
                 "Uncategorized",
             ],
