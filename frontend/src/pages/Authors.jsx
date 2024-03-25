@@ -10,7 +10,7 @@ const Authors = () => {
     useEffect(() => {
         const getAuthors = async () => {
             axios
-                .get("https://mernblog-dln6.onrender.com/api/users")
+                .get("https://wordwave-jvqf.onrender.com/api/users")
                 .then((res) => {
                     // console.log(res.data.data);
                     setAuthors(res.data.data);

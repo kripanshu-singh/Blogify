@@ -23,7 +23,7 @@ const DashBoard = () => {
         setLoading(true);
         const getAllPostOfUser = async () => {
             await axios
-                .get(`https://mernblog-dln6.onrender.com/api/posts/user/${id}`)
+                .get(`https://wordwave-jvqf.onrender.com/api/posts/user/${id}`)
                 .then((res) => {
                     setPosts(res.data.data);
                 })

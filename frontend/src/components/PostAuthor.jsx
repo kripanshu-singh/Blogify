@@ -20,7 +20,7 @@ const PostAuthor = ({ creator, createdAt }) => {
         const getUserFormID = async () => {
             await axios
                 .get(
-                    `https://mernblog-dln6.onrender.com/api/users/${creator}`,
+                    `https://wordwave-jvqf.onrender.com/api/users/${creator}`,
                     {
                         // creator,
                     }

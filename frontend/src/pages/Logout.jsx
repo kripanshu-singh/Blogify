@@ -19,7 +19,7 @@ const Logout = () => {
                 // Send tokens to backend for logout (if required)
                 if (accessToken && refreshToken) {
                     await axios.post(
-                        "https://mernblog-dln6.onrender.com/api/users/logout",
+                        "https://wordwave-jvqf.onrender.com/api/users/logout",
                         {
                             accessToken,
                             refreshToken,

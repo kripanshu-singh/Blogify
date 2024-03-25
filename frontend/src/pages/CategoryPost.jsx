@@ -13,7 +13,7 @@ const CategoryPost = () => {
         const fetchPost = async () => {
             await axios
                 .get(
-                    `https://mernblog-dln6.onrender.com/api/posts/category/${category}`
+                    `https://wordwave-jvqf.onrender.com/api/posts/category/${category}`
                 )
                 .then((res) => {
                     setPosts(res.data.data);

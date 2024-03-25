@@ -67,7 +67,7 @@ const EditPost = () => {
     useEffect(() => {
         const fetchPostDetails = async () => {
             await axios
-                .get(`https://mernblog-dln6.onrender.com/api/posts/${Postid}`)
+                .get(`https://wordwave-jvqf.onrender.com/api/posts/${Postid}`)
                 .then((res) => {
                     // setCreatorID(res.data.data?.creator);
                     setTitle(res.data?.data.title);
@@ -95,7 +95,7 @@ const EditPost = () => {
         formData.append("thumbnail", thumbnail);
         await axios
             .patch(
-                `https://mernblog-dln6.onrender.com/api/posts/edit/${Postid}`,
+                `https://wordwave-jvqf.onrender.com/api/posts/edit/${Postid}`,
                 formData,
                 {
                     headers: {

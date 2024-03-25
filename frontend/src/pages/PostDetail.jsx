@@ -19,7 +19,7 @@ const PostDetail = () => {
         const getUserFormToken = async () => {
             await axios
                 .post(
-                    `https://mernblog-dln6.onrender.com/api/users/user_from_token`,
+                    `https://wordwave-jvqf.onrender.com/api/users/user_from_token`,
                     {
                         accessToken,
                     }
@@ -36,7 +36,7 @@ const PostDetail = () => {
     useEffect(() => {
         const fetchPostDetails = async () => {
             await axios
-                .get(`https://mernblog-dln6.onrender.com/api/posts/${Postid}`)
+                .get(`https://wordwave-jvqf.onrender.com/api/posts/${Postid}`)
                 .then((res) => {
                     setCreatorID(res.data.data?.creator);
                     setPost(res.data?.data);

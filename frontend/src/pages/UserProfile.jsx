@@ -31,7 +31,7 @@ const UserProfile = () => {
         const getUserFromToken = async () => {
             await axios
                 .post(
-                    `https://mernblog-dln6.onrender.com/api/users/user_from_token`,
+                    `https://wordwave-jvqf.onrender.com/api/users/user_from_token`,
                     {
                         accessToken,
                     }
@@ -59,7 +59,7 @@ const UserProfile = () => {
         avatarData.set("avatar", avatar);
         await axios
             .post(
-                "https://mernblog-dln6.onrender.com/api/users/change_avatar",
+                "https://wordwave-jvqf.onrender.com/api/users/change_avatar",
                 avatarData,
                 {
                     headers: { Authorization: `Bearer ${accessToken}` },
@@ -75,7 +75,7 @@ const UserProfile = () => {
         setloading(true);
         await axios
             .patch(
-                "https://mernblog-dln6.onrender.com/api/users/edit-user",
+                "https://wordwave-jvqf.onrender.com/api/users/edit-user",
                 {
                     fullName: fullName,
                     email: email,

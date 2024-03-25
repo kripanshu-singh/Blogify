@@ -19,7 +19,7 @@ const DeletePost = ({ postID }) => {
         const getUserFormToken = async () => {
             await axios
                 .post(
-                    `https://mernblog-dln6.onrender.com/api/users/user_from_token`,
+                    `https://wordwave-jvqf.onrender.com/api/users/user_from_token`,
                     {
                         accessToken,
                     }
@@ -38,7 +38,7 @@ const DeletePost = ({ postID }) => {
         try {
             await axios
                 .delete(
-                    `https://mernblog-dln6.onrender.com/api/posts/delete/${postID}`,
+                    `https://wordwave-jvqf.onrender.com/api/posts/delete/${postID}`,
                     {
                         headers: {
                             Authorization: `Bearer ${accessToken}`,

@@ -37,7 +37,7 @@ const Header = () => {
         const getUserFormToken = async () => {
             await axios
                 .post(
-                    `https://mernblog-dln6.onrender.com/api/users/user_from_token`,
+                    `https://wordwave-jvqf.onrender.com/api/users/user_from_token`,
                     {
                         accessToken,
                     }

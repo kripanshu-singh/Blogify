@@ -14,7 +14,7 @@ const Register = () => {
         e.preventDefault();
         try {
             const response = await axios
-                .post(`https://mernblog-dln6.onrender.com/api/users/register`, {
+                .post(`https://wordwave-jvqf.onrender.com/api/users/register`, {
                     fullName: fullName,
                     email: email,
                     password: password,

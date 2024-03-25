@@ -12,7 +12,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "https://mernblog-dln6.onrender.com/api/users/login",
+                "https://wordwave-jvqf.onrender.com/api/users/login",
                 {
                     email: email,
                     password: password,

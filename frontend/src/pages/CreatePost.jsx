@@ -77,7 +77,7 @@ const CreatePost = () => {
         formData.append("thumbnail", thumbnail);
         await axios
             .post(
-                "https://mernblog-dln6.onrender.com/api/posts/create_post",
+                "https://wordwave-jvqf.onrender.com/api/posts/create_post",
                 formData,
                 {
                     headers: {

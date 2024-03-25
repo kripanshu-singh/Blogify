@@ -11,7 +11,7 @@ const AuthorPost = () => {
     useEffect(() => {
         const fetchPost = async () => {
             await axios
-                .get(`https://mernblog-dln6.onrender.com/api/posts/user/${id}`)
+                .get(`https://wordwave-jvqf.onrender.com/api/posts/user/${id}`)
                 .then((res) => {
                     setPosts(res.data.data);
                     // console.log(

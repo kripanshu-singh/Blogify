@@ -11,7 +11,7 @@ const Posts = () => {
     useEffect(() => {
         const fetchPost = async () => {
             await axios
-                .get("https://mernblog-dln6.onrender.com/api/posts")
+                .get("https://wordwave-jvqf.onrender.com/api/posts")
                 .then((res) => {
                     setPosts(res.data.data);
                     // console.log(
