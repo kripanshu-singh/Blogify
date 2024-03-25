@@ -2,11 +2,14 @@ import axios from "axios";
 import js_cookie from "js-cookie";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSession } from "../contexts/session";
+
 const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const { setAccessToken, setUserObject } = useSession();
 
     const loginUser = async (e) => {
         e.preventDefault();
@@ -18,6 +21,7 @@ const Login = () => {
                     password: password,
                 }
             );
+
             // console.log(response.data);
             // console.log(
             //     `\n ~ loginUser ~ response.data.accessToken :- `,
@@ -31,11 +35,14 @@ const Login = () => {
 
             const refreshToken = response.data.data.refreshToken;
 
+            setAccessToken(accessToken);
+            setUserObject(response.data?.data?.newUser);
+
             // Store access token and refresh token as cookies using js-cookie
             js_cookie.set("accessToken", accessToken, { expires: 1 });
             js_cookie.set("refreshToken", refreshToken, { expires: 10 }); // Set expiry for refresh token (e.g., 7 days)
             navigate("/");
-            window.location.reload();
+            // window.location.reload();
         } catch (error) {
             setError(error.response.data.message || "Error! Please try again");
         }

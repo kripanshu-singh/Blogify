@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import js_cookie from "js-cookie";
+import { useSession } from "../contexts/session";
 
 const Logout = () => {
     const navigate = useNavigate();
+    const { userLogOut } = useSession();
 
     useEffect(() => {
         const logoutUser = async () => {
@@ -18,24 +20,28 @@ const Logout = () => {
 
                 // Send tokens to backend for logout (if required)
                 if (accessToken && refreshToken) {
-                    await axios.post(
-                        "https://wordwave-jvqf.onrender.com/api/users/logout",
-                        {
-                            accessToken,
-                            refreshToken,
-                        }
-                    );
+                    await axios
+                        .post(
+                            "https://wordwave-jvqf.onrender.com/api/users/logout",
+                            {
+                                accessToken,
+                                refreshToken,
+                            }
+                        )
+                        .then(() => {
+                            js_cookie.remove("accessToken");
+                            js_cookie.remove("refreshToken");
+                            userLogOut();
+                            navigate("/login");
+                        });
                 }
-                navigate("/login");
-                js_cookie.remove("accessToken");
-                js_cookie.remove("refreshToken");
-                window.location.reload();
+                // window.location.reload();
             } catch (error) {
                 console.error("Logout failed:", error);
             }
         };
         logoutUser();
-    }, [navigate]);
+    }, []);
 
     return <></>;
 };

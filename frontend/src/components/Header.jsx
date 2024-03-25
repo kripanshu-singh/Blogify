@@ -6,12 +6,19 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import js_cookie from "js-cookie";
 import axios from "axios";
+import { useSession } from "../contexts/session";
 
 const Header = () => {
+    const { accessToken, userObject } = useSession();
+    // console.log(`\n ~ Header ~ userObject :- `, userObject);
+
+    const userName = userObject?.fullName || "";
+
     const [isNavShowing, setIsNavShowing] = useState(
         window.innerWidth > 800 ? true : false
     );
-    const accessToken = js_cookie.get("accessToken");
+    // const accessToken = js_cookie.get("accessToken");
+    // console.log(`\n ~ Header ~ accessToken :- `, accessToken);
 
     useEffect(() => {
         const handleResize = () => {
@@ -30,27 +37,27 @@ const Header = () => {
             setIsNavShowing(!isNavShowing);
         }
     };
-    const [userName, setUserName] = useState(null);
-    // const [userID, setUserID] = useState(null);
+    // const [userName, setUserName] = useState(null);
+    // // const [userID, setUserID] = useState(null);
 
-    useEffect(() => {
-        const getUserFormToken = async () => {
-            await axios
-                .post(
-                    `https://wordwave-jvqf.onrender.com/api/users/user_from_token`,
-                    {
-                        accessToken,
-                    }
-                )
-                .then((res) => {
-                    // setUserID(res?.data?.data?._id);
-                    setUserName(res?.data?.data?.fullName);
-                })
-                .catch((error) => console.log(error.message));
-        };
-        getUserFormToken();
-    }, []);
-    // console.log(`\n ~ Header ~ user.fullName :- `, userName);
+    // useEffect(() => {
+    //     const getUserFormToken = async () => {
+    //         await axios
+    //             .post(
+    //                 `https://wordwave-jvqf.onrender.com/api/users/user_from_token`,
+    //                 {
+    //                     accessToken,
+    //                 }
+    //             )
+    //             .then((res) => {
+    //                 // setUserID(res?.data?.data?._id);
+    //                 setUserName(res?.data?.data?.fullName);
+    //             })
+    //             .catch((error) => console.log(error.message));
+    //     };
+    //     getUserFormToken();
+    // }, []);
+    // // console.log(`\n ~ Header ~ user.fullName :- `, userName);
     return (
         <nav>
             <div className="container nav__container">
