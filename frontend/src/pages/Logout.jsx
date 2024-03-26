@@ -31,8 +31,8 @@ const Logout = () => {
                         .then(() => {
                             js_cookie.remove("accessToken");
                             js_cookie.remove("refreshToken");
-                            userLogOut();
                             navigate("/");
+                            userLogOut();
                         });
                 }
                 // window.location.reload();
