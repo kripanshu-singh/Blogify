@@ -32,7 +32,7 @@ const Logout = () => {
                             js_cookie.remove("accessToken");
                             js_cookie.remove("refreshToken");
                             userLogOut();
-                            navigate("/login");
+                            navigate("/");
                         });
                 }
                 // window.location.reload();
