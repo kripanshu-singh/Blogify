@@ -14,10 +14,8 @@ const Logout = () => {
                 // Retrieve access and refresh tokens from cookies
                 const accessToken = js_cookie.get("accessToken");
                 // console.log(`\n ~ logoutUser ~ accessToken :- `, accessToken);
-
                 const refreshToken = js_cookie.get("refreshToken");
                 // console.log(`\n ~ logoutUser ~ refreshToken :- `, refreshToken);
-
                 // Send tokens to backend for logout (if required)
                 if (accessToken && refreshToken) {
                     await axios
@@ -31,8 +29,8 @@ const Logout = () => {
                         .then(() => {
                             js_cookie.remove("accessToken");
                             js_cookie.remove("refreshToken");
-                            navigate("/");
                             userLogOut();
+                            navigate("/");
                         });
                 }
                 // window.location.reload();
