@@ -209,6 +209,12 @@ footer {
     background-color: var(--color-white);
     color: var(--color-gray-900);
 }
+
+.footerIcon {
+    align-self: center;
+    margin-right: 0.5rem; 
+}
+
 .footer__copyright {
     text-align: center;
     border-top: 2px solid var(--color-gray-700);
