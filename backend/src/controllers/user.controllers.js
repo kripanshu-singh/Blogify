@@ -46,7 +46,7 @@ const generateTokens = async (_id) => {
 //! It register user
 const registerUser = asyncHandler(async (req, res) => {
     //! getting user details from body
-    const { fullName, email, password, confirmPassword, urlAvatar } = req.body;
+    const { fullName, email, password, confirmPassword } = req.body;
     console.log(`\n ~ registerUser ~ req.body :- `, req.body);
 
     //! chek if we gell all feilds
@@ -93,7 +93,6 @@ const registerUser = asyncHandler(async (req, res) => {
         fullName,
         email: toLowerCaseEmail,
         password,
-        avatar: urlAvatar,
     });
     console.log(`\n ~ registerUser ~ user :- `, user);
 
