@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4732ad87.css",
-    "main.js": "/static/js/main.41e0621c.js",
+    "main.css": "/static/css/main.7c37e1c2.css",
+    "main.js": "/static/js/main.1b551c20.js",
     "static/media/loader4.gif": "/static/media/loader4.19a6c426eac9710a92e3.gif",
     "static/media/loader1_transparent.gif": "/static/media/loader1_transparent.c0168321661b0e197dad.gif",
     "static/media/404.png": "/static/media/404.99863b7bc301a5cda06f.png",
     "static/media/loader3.gif": "/static/media/loader3.0a49fa6e5da2e0a88ef1.gif",
-    "static/media/WordWave(1).png": "/static/media/WordWave(1).138d2af6ee6383ab31cd.png",
     "static/media/avatar13.jpg": "/static/media/avatar13.6b2a2ad87fcf536e0283.jpg",
+    "static/media/Blogify (2).png": "/static/media/Blogify (2).0704adb6ed1e95ab9ffb.png",
     "index.html": "/index.html",
-    "main.4732ad87.css.map": "/static/css/main.4732ad87.css.map",
-    "main.41e0621c.js.map": "/static/js/main.41e0621c.js.map"
+    "main.7c37e1c2.css.map": "/static/css/main.7c37e1c2.css.map",
+    "main.1b551c20.js.map": "/static/js/main.1b551c20.js.map"
   },
   "entrypoints": [
-    "static/css/main.4732ad87.css",
-    "static/js/main.41e0621c.js"
+    "static/css/main.7c37e1c2.css",
+    "static/js/main.1b551c20.js"
   ]
 }
