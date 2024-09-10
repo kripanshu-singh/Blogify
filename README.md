@@ -1,6 +1,6 @@
-# [WordWave](https://kripanshusingh-wordwave.netlify.app/)
+# [Blogify](https://kripanshu-blogify.netlify.app/)
 
-WordWave is a dynamic web application that showcases the fusion of my expertise in the MERN (MongoDB, Express.js, React.js, Node.js) stack.This project served as a learning ground.
+Blogify is a dynamic web application that showcases the fusion of my expertise in the MERN (MongoDB, Express.js, React.js, Node.js) stack.This project served as a learning ground.
 
 ## Key Features:
 
@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `User Registration and Authentication:`
 
-WordWave allows users to create accounts, ensuring a secure and personalized experience.
+Blogify allows users to create accounts, ensuring a secure and personalized experience.
 
 ### `Cookie Token Management:`
 
@@ -24,6 +24,6 @@ The backend is securely deployed on Render.com, while the user-facing frontend r
 
 ### `My Journey with MERN:`
 
-WordWave demonstrates my hands-on experience with the full MERN stack. I implemented user registration and authentication using industry best practices for secure user onboarding and access control. Additionally, I ensured secure session management through proper token storage and handling, guaranteeing a seamless user experience. Furthermore, I leveraged Cloudinary's cloud storage capabilities for efficient media management, allowing for scalable user avatar and thumbnail storage. Finally, deploying the backend on **Render.com** and the frontend on `Netlify`.com showcases my ability to deploy applications across various platforms, ensuring accessibility and readiness for production environments.
+Blogify demonstrates my hands-on experience with the full MERN stack. I implemented user registration and authentication using industry best practices for secure user onboarding and access control. Additionally, I ensured secure session management through proper token storage and handling, guaranteeing a seamless user experience. Furthermore, I leveraged Cloudinary's cloud storage capabilities for efficient media management, allowing for scalable user avatar and thumbnail storage. Finally, deploying the backend on **Render.com** and the frontend on `Netlify`.com showcases my ability to deploy applications across various platforms, ensuring accessibility and readiness for production environments.
 
-**Be prepared to delve deeper and explore the functionalities of WordWave!**
+**Be prepared to delve deeper and explore the functionalities of Blogify!**
