@@ -54,9 +54,6 @@ userSchema.pre("findOneAndUpdate", async function (next) {
 
 //! creating method to compare the passwords (hashed and OG)
 userSchema.methods.isPasswordCorrect = async function (password) {
-    // // // console.log(`\n METHOD~ password :- `, password);
-    // // // console.log(`\n METHOD~ password :-  ${this.password}`);
-
     return await bcrypt.compare(password, this.password);
 };
 

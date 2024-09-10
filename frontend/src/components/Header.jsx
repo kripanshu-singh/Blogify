@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import logo from "../images/logo.jpg";
-import logo from "../images/WordWave(1).png";
+// import logo from "../images/WordWave(1).png";
+import logo from "../images/Blogify (2).png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import js_cookie from "js-cookie";
